@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>
+            Predicted Document
+        </title>
+    </head>
+    <body>
+        <h1><div style="text-align:center"><font color='blue'>NLP Document Finder</font></div></h1>
+        <hr>
+        </br>
+        <h2><div style="text-align:center">Enter text</div></h2>
+        </br>
+        <div class='container'>
+            <form method="POST" action=/predict>
+                <div class="form-group">
+                    <label for='user_input'><p class='font-weight-bold'>User Input</p></label>
+                    <input type='text', name='user_input'>
+                    <br>
+                    <small id="user_help" class='form-text text-muted'>Add text within quotes. If multiple text then separate by comma.</small>
+                </div>
+                <input class='btn btn-primary' type='submit' value='submit'></input>
+            </form>
+        </div>    
+    </body>
+</html>
