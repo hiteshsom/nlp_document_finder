@@ -6,10 +6,16 @@ sp_lg = spacy.load('en_core_web_lg')
 import nltk
 import re
 import json
-with open('/home/jupyter/nlp_document_finder/data/train2.json') as file:
+with open('train2.json') as file:
     data = json.load(file)
 import tensorflow_hub as hub
+import tensorflow as tf
+import re
 embed = hub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+
+import joblib
+
+le = joblib.load('le.joblib')
 
 
 from datetime import datetime
@@ -62,7 +68,7 @@ def home():
 def predict():
     if request.method == 'POST':
         try:
-            user_input = float(request.form['user_input'])
+            user_input = request.form['user_input']
             user_input = [user_input]
             query_date = {}
             for idx, row in enumerate(user_input):
@@ -101,8 +107,8 @@ def predict():
         except ValueError:
             return "Check if text is entered correctly"
     
-    return render_template('predict.html', prediction = [query_document, query_date])
+    return render_template('predict.html', prediction = list(zip(query_document, query_date.values()))) #list(zip(query_document, query_date.values()))
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=10000, debug=True)
