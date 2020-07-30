@@ -6,13 +6,41 @@
   </head>
 
   <body>
-    <h1><div style="text-align:center"><font color="blue">Prediction Result</font></div></h1>
+    <h1><div style="text-align:center"><font color=#eb4034>Prediction Result</font></div></h1>
     <hr>
-    <div class="card text-center" style="width:21.5em;margin:0 auto;">
-      <div class="card-body">
-        <p><h4><font color="black">{{prediction}}</font></h4></p>
-        </div>
-        </div>
+    <!-- <div class="container" style="width:1% of viewport width;margin:0 auto;"> -->
+      <!-- <div class="card-body"> -->
+        <style>
+          table {
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
+          table, td, th {
+            border: 1px solid black;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        </style>
+          <table>
+            <tr>
+              <th colspan="1", rowspan="2">User Input</th>
+              <th colspan="2">Query Engine Parameters</th>
+            </tr>
+            <tr>
+              <th>Folder Location</th>
+              <th>Date</th>
+            </tr>
+            <tr>
+              <td>{{prediction[0][0]}}</td>
+              <td>{{prediction[0][1][0]}}</td>
+              <td>{{prediction[0][2][0]}}</td>
+            </tr>
+          </table>
+        <!-- <p><h4><font color="black">{{prediction[0][0]}}</font></h4></p> -->
+        <!-- </div> -->
+        <!-- </div> -->
   </body>
 
 </html>

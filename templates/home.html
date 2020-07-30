@@ -7,18 +7,17 @@
         </title>
     </head>
     <body>
-        <h1><div style="text-align:center"><font color='blue'>NLP Document Finder</font></div></h1>
+        <h1><div style="text-align:center"><font color=#eb4034>NLP Document Finder</font></div></h1>
         <hr>
         </br>
-        <h2><div style="text-align:center">Enter text</div></h2>
+        <h4><div class = 'container' style="text-align:left">Enter your input in the box below</div></h4>
         </br>
         <div class='container'>
             <form method="POST" action=/predict>
                 <div class="form-group">
-                    <label for='user_input'><p class='font-weight-bold'>User Input</p></label>
-                    <input type='text', name='user_input'>
+                    <label for='user_input'><p class='font-weight-bold'></p></label>
+                    <input type='textarea' name='user_input' style="width:50%">
                     <br>
-                    <small id="user_help" class='form-text text-muted'>Add text within quotes. If multiple text then separate by comma.</small>
                 </div>
                 <input class='btn btn-primary' type='submit' value='submit'></input>
             </form>

@@ -6,7 +6,7 @@ sp_lg = spacy.load('en_core_web_lg')
 import nltk
 import re
 import json
-with open('train2.json') as file:
+with open("data\\train2.json") as file:
     data = json.load(file)
 import tensorflow_hub as hub
 import tensorflow as tf
@@ -68,8 +68,8 @@ def home():
 def predict():
     if request.method == 'POST':
         try:
-            user_input = request.form['user_input']
-            user_input = [user_input]
+            original_user_input = request.form['user_input']
+            user_input = [original_user_input]
             query_date = {}
             for idx, row in enumerate(user_input):
                 date_occurences = [(ent.text.strip(), ent.label_) for ent in sp_lg(row).ents if ent.label_ == 'DATE']
@@ -92,22 +92,16 @@ def predict():
             y_pred = y_proba.argmax(axis=1)
             y_proba = model.predict(X_user)
             y_pred = y_proba.argmax(axis=1)
-            # print(f"label predicted: {le.inverse_transform(y_pred)}")
             query_document = []
             for idx, pred in enumerate(y_pred):
                 for intent in data['intents']:
                     if intent['label'] == le.inverse_transform(pred.reshape(1,)):
-                        # print(f"Query search: {intent['responses']}")
                         query_document.append(intent['responses'])
-
-
-        
-
 
         except ValueError:
             return "Check if text is entered correctly"
     
-    return render_template('predict.html', prediction = list(zip(query_document, query_date.values()))) #list(zip(query_document, query_date.values()))
+    return render_template('predict.html', prediction = list(zip([original_user_input], query_document, query_date.values()))) 
 
 
 if __name__ == "__main__":
