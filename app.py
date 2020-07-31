@@ -6,7 +6,7 @@ sp_lg = spacy.load('en_core_web_lg')
 import nltk
 import re
 import json
-with open("data\\train2.json") as file:
+with open("data/train2.json") as file:
     data = json.load(file)
 import tensorflow_hub as hub
 import tensorflow as tf
