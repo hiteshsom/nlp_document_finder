@@ -105,4 +105,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(port=10000, debug=True)
+    app.run(port=10000)
