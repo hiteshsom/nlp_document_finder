@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 import spacy
 import pandas as pd 
@@ -6,7 +7,7 @@ sp_lg = spacy.load('en_core_web_lg')
 import nltk
 import re
 import json
-with open("data/train2.json") as file:
+with open(os.path.join(os.getcwd(), 'data', 'train2.json')) as file:
     data = json.load(file)
 import tensorflow_hub as hub
 import tensorflow as tf
@@ -97,6 +98,7 @@ def predict():
                 for intent in data['intents']:
                     if intent['label'] == le.inverse_transform(pred.reshape(1,)):
                         query_document.append(intent['responses'])
+                        os.startfile(intent['responses'][0])
 
         except ValueError:
             return "Check if text is entered correctly"
