@@ -4,6 +4,9 @@ import json
 
 # Directory of in your PC
 DIRECTORY = os.getcwd()
+os.remove(os.path.join(DIRECTORY, 'data/train2.json'))
+os.remove(os.path.join(DIRECTORY, 'trained_documents.pickle'))
+os.remove(os.path.join(DIRECTORY, 'trained_locations.pickle'))
 
 # Function to find a new create file 
 def absoluteFilePaths(directory):
