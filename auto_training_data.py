@@ -29,7 +29,7 @@ else:
     trained_documents = []
     trained_paths = []
 
-locations, documents = absoluteFilePaths(os.path.join(DIRECTORY, 'Google'))
+locations, documents = absoluteFilePaths(os.path.join(DIRECTORY, 'User'))
 paths = [os.path.join(loc, doc) for loc, doc in zip(locations, documents)]
 
 for doc in documents:
