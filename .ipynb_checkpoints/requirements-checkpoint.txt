@@ -270,7 +270,7 @@ requests==2.23.0
 requests-oauthlib==1.2.0
 retrying==1.3.3
 rope @ file:///home/conda/feedstock_root/build_artifacts/rope_1588950285934/work
-rsa==4.0
+rsa==4.7
 Rtree==0.9.4
 ruamel-yaml==0.15.80
 scikit-image==0.17.2
