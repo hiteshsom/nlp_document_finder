@@ -232,7 +232,7 @@ pycurl==7.43.0.5
 pydocstyle==5.0.2
 pydot==1.4.1
 pyflakes==2.1.1
-Pygments==2.6.1
+Pygments==2.7.4
 PyJWT==1.7.1
 pylint @ file:///home/conda/feedstock_root/build_artifacts/pylint_1588950503635/work
 pyodbc==4.0.30
