@@ -206,7 +206,7 @@ pep8==1.7.1
 pexpect==4.8.0
 phik @ file:///home/conda/feedstock_root/build_artifacts/phik_1590331950347/work
 pickleshare==0.7.5
-Pillow==7.1.2
+Pillow==8.1.1
 pkginfo==1.5.0.1
 plac==1.1.3
 pluggy @ file:///home/conda/feedstock_root/build_artifacts/pluggy_1588616566123/work
