@@ -334,7 +334,7 @@ ujson==1.35
 unicodecsv==0.14.1
 Unidecode==1.1.1
 uritemplate==3.0.1
-urllib3==1.25.9
+urllib3==1.26.5
 visions @ file:///home/conda/feedstock_root/build_artifacts/visions_1589284473785/work
 wasabi==0.7.0
 watchdog==0.10.2
