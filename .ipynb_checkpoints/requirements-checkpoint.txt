@@ -312,7 +312,7 @@ tblib==1.6.0
 tenacity @ file:///home/conda/feedstock_root/build_artifacts/tenacity_1588242769366/work
 tensorboard==2.2.2
 tensorboard-plugin-wit==1.7.0
-tensorflow==2.2.0
+tensorflow==2.5.1
 tensorflow-estimator==2.2.0
 tensorflow-hub==0.8.0
 termcolor==1.1.0
