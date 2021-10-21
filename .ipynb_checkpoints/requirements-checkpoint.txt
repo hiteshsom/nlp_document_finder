@@ -15,7 +15,7 @@ async-generator==1.10
 atomicwrites @ file:///home/conda/feedstock_root/build_artifacts/atomicwrites_1588182545583/work
 attrs==19.3.0
 autopep8==1.5.2
-Babel==2.8.0
+Babel==2.9.1
 backcall==0.1.0
 backports.shutil-get-terminal-size==1.0.0
 bcolz==1.2.1
