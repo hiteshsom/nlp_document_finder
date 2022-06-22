@@ -182,7 +182,7 @@ notebook @ file:///home/conda/feedstock_root/build_artifacts/notebook_1588887226
 notebook-executor @ file:///opt/conda/conda-bld/dlenv-base_1591905971026/work/packages/notebook_executor
 numba @ file:///home/conda/feedstock_root/build_artifacts/numba_1590133695837/work
 numexpr==2.7.1
-numpy==1.18.1
+numpy==1.22.0
 numpydoc @ file:///home/conda/feedstock_root/build_artifacts/numpydoc_1590519183599/work
 oauthlib==3.0.1
 olefile==0.46
