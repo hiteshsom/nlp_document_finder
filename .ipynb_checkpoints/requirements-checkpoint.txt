@@ -170,7 +170,7 @@ mypy-extensions==0.4.3
 nb-conda==2.2.1
 nb-conda-kernels==2.2.3
 nbclient @ file:///home/conda/feedstock_root/build_artifacts/nbclient_1591814389930/work
-nbconvert==5.6.1
+nbconvert==6.5.1
 nbdime @ file:///home/conda/feedstock_root/build_artifacts/nbdime_1588773248389/work
 nbformat==5.0.6
 nbpresent==3.0.2
